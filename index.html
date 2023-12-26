@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My webpage</title>
     <style>
+      html {
+        font-size: 16pt;
+      }
       body {
-        width: 100vw;
         height: 100vh;
         background-image: url("vr.jpg");
         background-size: contain;
@@ -53,28 +55,73 @@
         color: white;
         background-color: red;
       }
+      li:first-child {
+        font-size: 1.125rem;
+      }
+      p {
+        line-height: 1.5rem;
+        font-size: 1lh;
+      }
+      img {
+        position: sticky;
+      }
+      body {
+        margin: 0;
+      }
+      a {
+        width: 500px;
+        height: 200px;
+      }
+
+      header {
+        display: flex;
+        position: sticky;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+        justify-content: space-between;
+        background-color: rgba(250, 235, 215, 0.533);
+
+        & > img {
+          height: 50px;
+          margin: 8px;
+        }
+        & > ul > li {
+          display: inline;
+        }
+      }
     </style>
   </head>
 
   <body>
     <h1 id="title" class="big">BrainerX website</h1>
+    <header>
+      <img src="logo.png" alt="logo" />
+      <ul>
+        <li>Element 1</li>
+        <li>Element 2</li>
+        <li>Element 3</li>
+        <li>Element 4</li>
+        <li>Element 5</li>
+      </ul>
+    </header>
     <section>
-      <h2>Section one: Introduction</h2>
-      <div style="display: flex; justify-content: center">
+      <div>
+        <h2>Section one: Introduction</h2>
         <img src="logo.png" alt="BrainerX logo" width="100px" />
+        <p id="title">
+          <a href="https://brainerx.com">BrainerX</a> is a
+          <a href="https://dsjkdjak.dee">professional</a> training
+          <span>test </span>school that focuses on modern IT skills
+        </p>
+        <ol>
+          <li class="big">Element 1</li>
+          <li style="font-size: 16pt; font-weight: 700; font-family: cursive">
+            Element 2
+          </li>
+          <li id="white">Element 5</li>
+        </ol>
       </div>
-      <p id="title">
-        <a href="https://brainerx.com">BrainerX</a> is a
-        <a href="https://dsjkdjak.dee">professional</a> training school that
-        focuses on modern IT skills
-      </p>
-      <ol>
-        <li class="big">Element 1</li>
-        <li style="font-size: 16pt; font-weight: 700; font-family: cursive">
-          Element 2
-        </li>
-        <li id="white">Element 5</li>
-      </ol>
 
       <table>
         <thead>
@@ -118,7 +165,83 @@
           </table>
           <input type="submit" value="Envoyer" />
         </form>
+        <form action="/form-submitted.php" method="post">
+          <table>
+            <tr>
+              <td><label for="nom">Nom:</label></td>
+              <td><input type="text" name="nom" id="nom" /></td>
+            </tr>
+            <tr>
+              <td><label for="prenom">Prénom:</label></td>
+              <td><input type="text" name="prenom" id="prenom" /></td>
+            </tr>
+            <tr>
+              <td><label for="email">E-mail:</label></td>
+              <td><input type="email" name="email" id="email" /></td>
+            </tr>
+            <tr>
+              <td><label for="age">Age:</label></td>
+              <td><input type="number" name="age" id="age" /></td>
+            </tr>
+          </table>
+          <input type="submit" value="Envoyer" />
+        </form>
       </table>
+      <table>
+        <thead>
+          <tr>
+            <th class="big">Nom</th>
+            <th>Prénom</th>
+            <th>E-mail</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Person</td>
+            <td class="big">3</td>
+            <td>p3@gmail.com</td>
+          </tr>
+          <tr>
+            <td>Person</td>
+            <td>4</td>
+            <td>p4@gmail.com</td>
+          </tr>
+        </tbody>
+
+        <form action="/form-submitted.php" method="post">
+          <table>
+            <tr>
+              <td><label for="nom">Nom:</label></td>
+              <td><input type="text" name="nom" id="nom" /></td>
+            </tr>
+            <tr>
+              <td><label for="prenom">Prénom:</label></td>
+              <td><input type="text" name="prenom" id="prenom" /></td>
+            </tr>
+            <tr>
+              <td><label for="email">E-mail:</label></td>
+              <td><input type="email" name="email" id="email" /></td>
+            </tr>
+            <tr>
+              <td><label for="age">Age:</label></td>
+              <td><input type="number" name="age" id="age" /></td>
+            </tr>
+          </table>
+          <input type="submit" value="Envoyer" />
+        </form>
+      </table>
+
+      <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s, when an unknown printer took a galley of type and
+        scrambled it to make a type specimen book. It has survived not only five
+        centuries, but also the leap into electronic typesetting, remaining
+        essentially unchanged. It was popularised in the 1960s with the release
+        of Letraset sheets containing Lorem Ipsum passages, and more recently
+        with desktop publishing software like Aldus PageMaker including versions
+        of Lorem Ipsum.
+      </p>
     </section>
   </body>
 </html>
