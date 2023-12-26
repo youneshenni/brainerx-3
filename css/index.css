@@ -1,0 +1,26 @@
+.container {
+  width: 100%;
+  height: 100%;
+  background-color: aqua;
+}
+
+.containee {
+  width: 400px;
+  height: 400px;
+  background-color: red;
+  border: 50px solid greenyellow;
+  padding: 20px;
+  margin: 50px;
+}
+
+.internal {
+  width: 100%;
+  height: 100%;
+  background-color: blue;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
