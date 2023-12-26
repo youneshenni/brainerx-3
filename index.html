@@ -4,31 +4,80 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My webpage</title>
+    <style>
+      body {
+        width: 100vw;
+        height: 100vh;
+        background-image: url("vr.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: top right;
+      }
+      #title {
+        color: green;
+      }
+      a:hover {
+        color: red;
+      }
+      a:visited {
+        color: green;
+      }
+      a:active {
+        font-size: 32pt;
+      }
+      a {
+        font-weight: bold;
+        text-decoration: none;
+      }
+
+      input[type="submit"] {
+        background-color: rgb(34, 70, 254);
+        color: white;
+        padding: 8px 16px;
+        text-transform: uppercase;
+        border-radius: 4px;
+        border: none;
+        box-shadow: 0px 1px 2px 2px #0005;
+
+        margin: 32px;
+        transition: all 0.5s cubic-bezier(0, 0.96, 1, 0.1);
+      }
+      input[type="submit"]:active {
+        transform: translateY(2px);
+      }
+      input[type="submit"]:hover {
+        box-shadow: 0px 1px 2px 3.5px #0005;
+        transform: scale(1.25);
+        color: rgb(34, 70, 254);
+        background-color: white;
+      }
+    </style>
   </head>
 
   <body>
-    <h1>BrainerX website</h1>
+    <h1 id="title" class="big">BrainerX website</h1>
     <section>
       <h2>Section one: Introduction</h2>
-      <div>
-        <img src="logo.png" alt="BrainerX logo" width="500px" />
+      <div style="display: flex; justify-content: center">
+        <img src="logo.png" alt="BrainerX logo" width="100px" />
       </div>
-      <p>
-        BrainerX is a professional training school that focuses on modern IT
-        skills
+      <p id="title">
+        <a href="https://brainerx.com">BrainerX</a> is a
+        <a href="https://dsjkdjak.dee">professional</a> training school that
+        focuses on modern IT skills
       </p>
       <ol>
-        <li>Element 1</li>
-        <li>Element 2</li>
-        <li>Element 3</li>
-        <li>Element 4</li>
-        <li>Element 5</li>
+        <li class="big">Element 1</li>
+        <li style="font-size: 16pt; font-weight: 700; font-family: cursive">
+          Element 2
+        </li>
+        <li id="red">Element 5</li>
       </ol>
 
       <table>
         <thead>
           <tr>
-            <th>Nom</th>
+            <th class="big">Nom</th>
             <th>Prénom</th>
             <th>E-mail</th>
           </tr>
@@ -36,17 +85,7 @@
         <tbody>
           <tr>
             <td>Person</td>
-            <td>1</td>
-            <td>p1@gmail.com</td>
-          </tr>
-          <tr>
-            <td>Person</td>
-            <td>2</td>
-            <td>p2@gmail.com</td>
-          </tr>
-          <tr>
-            <td>Person</td>
-            <td>3</td>
+            <td class="big">3</td>
             <td>p3@gmail.com</td>
           </tr>
           <tr>
@@ -56,7 +95,7 @@
           </tr>
         </tbody>
 
-        <form action="http://193.70.113.26:8080" method="post">
+        <form action="/form-submitted.php" method="post">
           <table>
             <tr>
               <td><label for="nom">Nom:</label></td>
