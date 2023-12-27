@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: grid;
+        grid-template-columns:
+          100px 100px calc(35vw - 200px) 15vw 15vw calc(35vw - 200px)
+          200px;
+        grid-template-rows: 40px 20px 40px 1fr 100px 60px 1fr 100px;
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+      }
+      .header {
+        grid-area: 1 / 1 / 4 / -1;
+        background-color: aquamarine;
+        z-index: 0;
+      }
+      .logo {
+        grid-area: 1 / 1 / 4 / 2;
+        width: 100%;
+        z-index: 1;
+      }
+      .header-title {
+        grid-area: 2 / 2 / 3 / 3;
+        font-size: large;
+        color: black;
+        z-index: 1;
+      }
+      .nav {
+        grid-area: 2 / 7 / 3 / 8;
+        z-index: 1;
+        & > ul > li {
+          display: inline;
+          margin: 0 8px;
+        }
+      }
+      .title {
+        grid-area: 5 / 4 / 6 / 6;
+        text-align: center;
+        font-size: 32pt;
+      }
+      .button1 {
+        grid-area: 6 / 4 / 7 / 5;
+        text-align: center;
+        & > button {
+          width: 100%;
+        }
+      }
+      .button2 {
+        grid-area: 6 / 5 / 7 / 6;
+        text-align: center;
+        & > button {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header"></div>
+    <img src="img/icon.png" alt="" class="logo" />
+    <div class="header-title">BrainerX</div>
+    <div class="nav">
+      <ul>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+      </ul>
+    </div>
+    <div class="title">Website title</div>
+    <div class="button1"><button>Button 1</button></div>
+    <div class="button2"><button>Button 2</button></div>
+    <div class="footer"></div>
+    <div class="footer-copyright"></div>
+    <div class="footer-links"></div>
+  </body>
+</html>
