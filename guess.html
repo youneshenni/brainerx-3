@@ -1,0 +1,12 @@
+<script>
+  const r = Math.floor(Math.random() * 100);
+  let guess = parseInt(prompt("Guess a number between 0 and 100"));
+  do {
+    if (guess > r) {
+      guess = parseInt(prompt("Too high"));
+    } else if (guess < r) {
+      guess = parseInt(prompt("Too low"));
+    }
+  } while (guess !== r);
+  alert("You guessed it!");
+</script>
