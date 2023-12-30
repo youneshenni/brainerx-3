@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function getNumber(position) {
+        return parseInt(prompt(`Enter the ${position} number: `));
+      }
+
+      function multiply(number) {
+        return number * 4;
+      }
+
+      function printSum(number1, number2, number3, number4) {
+        const sum = number1 + number2 + number3 + number4;
+        alert(sum);
+      }
+
+      const number1 = getNumber("first");
+      const number2 = getNumber("second");
+      const number3 = getNumber("third");
+      const number4 = getNumber("fourth");
+
+      const double1 = multiply(number1);
+      const double2 = multiply(number2);
+      const double3 = multiply(number3);
+      const double4 = multiply(number4);
+
+      printSum(double1, double2, double3, double4);
+
+      alert(sum);
+    </script>
+  </head>
+  <body></body>
+</html>
