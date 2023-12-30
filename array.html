@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const string = "names1,naemee2,naffffme3,name4";
+
+      const array = string.split(",");
+      const formattedData = array
+        .map((name, index) => ({
+          name,
+          index,
+        }))
+        .filter((v) => !(v.name.length % 2));
+      console.log(formattedData);
+    </script>
+  </body>
+</html>

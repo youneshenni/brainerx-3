@@ -8,10 +8,10 @@
   <body>
     <script>
       // Recursive approach
-      function factorial(x) {
-        if (x <= 1) return 1;
-        return x * factorial(x - 1);
-      }
+      //   function factorial(x) {
+      //     if (x <= 1) return 1;
+      //     return x * factorial(x - 1);
+      //   }
 
       // Loop approach
       //   function factorial(x) {
@@ -22,10 +22,13 @@
       //     return fact;
       //   }
 
-      function fibonacci(n) {
-        if (n <= 1) return 1;
-        return fibonacci(n - 1) + fibonacci(n - 2);
-      }
+      //   function fibonacci(n) {
+      //     if (n <= 1) return 1;
+      //     return fibonacci(n - 1) + fibonacci(n - 2);
+      //   }
+      const factorial = (n) => (n <= 1 ? 1 : n * factorial(n - 1));
+      const fibonacci = (n) =>
+        n <= 1 ? 1 : fibonacci(n - 1) + fibonacci(n - 2);
 
       const x = parseInt(prompt("Please enter a number"));
 
