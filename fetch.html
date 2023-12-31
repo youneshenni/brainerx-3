@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const result = fetch("http://193.70.113.26:3000");
+      result
+        .then((response) => response.json())
+        .then((data) => console.log(data))
+        .catch((err) => {
+          alert("There was a problem loading data");
+        });
+    </script>
+  </body>
+</html>
