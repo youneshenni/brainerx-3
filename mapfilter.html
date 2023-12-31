@@ -7,10 +7,12 @@
     <script src="data.js"></script>
     <script>
       console.log(
-        data.map(({ first_name, last_name, gender }) => ({
-          fullName: `${first_name} ${last_name}`,
-          gender,
-        }))
+        data
+          .filter(({ gender }) => gender === "Male")
+          .map(({ first_name, last_name, gender }) => ({
+            fullName: `${first_name} ${last_name}`,
+            gender,
+          }))
       );
     </script>
   </head>
