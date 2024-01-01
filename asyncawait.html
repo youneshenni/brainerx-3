@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function getData() {
+        return fetch("http://193.70.113.26:3000/").then((res) => res.json());
+      }
+
+      async function asyncGetData() {
+        const res = await fetch("http://193.70.113.26:3000/");
+        const data = await res.json();
+        return data;
+      }
+
+      const result = [...Array(100)].map((_, i) =>
+        fetch("http://193.70.113.26:3000/" + (i + 1)).then((res) => res.json())
+      );
+      Promise.all(result)
+        .then((allData) => allData.flat())
+        .then(console.log);
+    </script>
+  </body>
+</html>
