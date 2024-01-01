@@ -1,0 +1,25 @@
+body {
+  width: calc(100vw - 16px);
+  padding: 8px;
+  margin: 0;
+  background-color: #eee;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+tr > * {
+  height: 52px;
+}
+tr {
+  border-bottom: 1px solid #ddd;
+}
+thead > tr > th {
+  height: 56px;
+  text-align: left;
+}
+td,
+th {
+  padding: 0 0 0 16px;
+}

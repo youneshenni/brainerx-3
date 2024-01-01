@@ -4,38 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <style>
-      body {
-        width: calc(100vw - 16px);
-        padding: 8px;
-        margin: 0;
-        background-color: #eee;
-      }
-      table {
-        width: 100%;
-        border-collapse: collapse;
-        background-color: white;
-      }
-      tr > * {
-        height: 52px;
-      }
-      tr {
-        border-bottom: 1px solid #ddd;
-      }
-      thead > tr > th {
-        height: 56px;
-        text-align: left;
-      }
-      td,
-      th {
-        padding: 0 0 0 16px;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <input type="text" id="input" />
-    <button id="clickable">Click me!</button>
-    <table border="0px">
+    <table id="myTable" border="0px">
       <thead>
         <tr>
           <th>First name</th>
@@ -95,13 +67,17 @@
         </tr>
       </tbody>
     </table>
+    <form id="form">
+      <input type="text" name="first" id="first" /><input
+        type="text"
+        name="last"
+        id="last"
+      /><input type="text" name="email" id="email" /><input
+        type="text"
+        name="number"
+        id="number"
+      /><input type="submit" value="Submit" />
+    </form>
   </body>
-  <script>
-    let i = 0;
-    document.getElementById("clickable").addEventListener("click", () => {
-      const value = document.getElementById("input").value.toUpperCase();
-      document.getElementsByTagName("td")[0].innerText = value;
-      alert(`You have clicked our button ${++i} times`);
-    });
-  </script>
+  <script src="index.js"></script>
 </html>
